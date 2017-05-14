@@ -1,0 +1,3 @@
+var Globals = {
+  'name' : 'value'
+}
