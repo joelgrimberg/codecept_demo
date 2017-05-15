@@ -9,6 +9,9 @@ exports.config = {
       "browser": "chrome",
       //"browser" : process.profile || "phantomjs",
       "restart" : "false"
+    },
+    "iterator": {
+      "require": "./iterator_helper.js"
     }
   },
   "include": {

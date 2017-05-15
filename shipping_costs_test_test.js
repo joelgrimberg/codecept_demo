@@ -39,6 +39,8 @@ In een testomgeving wil ik deze kunnen 'disabelen'.
 */
 
 Scenario('TG1 - shipping costs > 20,--', (I) => {
+  I.logConsole();
+
   // Screensettings
   I.resizeWindow(1220,1024);
 
@@ -65,14 +67,14 @@ Scenario('TG1 - shipping costs > 20,--', (I) => {
   I.saveScreenshot('TG1_button_shopping_cart.png');
 
   I.waitForElement('//*[@id="js_items_content"]/li[2]/div[2]/div[2]/div[5]/div/div[1]/a');
-  //alleen deze regel wijkt af van TG1
-  I.click('//*[@id="js_items_content"]/li[2]/div[2]/div[2]/div[5]/div/div[1]/a'); //first item to shopping cart
+  //alleen deze regel wijkt af van TG2
+  I.click('//*[@id="js_items_content"]/li[2]/div[2]/div[2]/div[5]/div/div[1]/a'); //second item to shopping cart
 
+  // To the shopping cart
   I.waitForElement('//*[@id="basket"]/div/div',30); //knop winkelwagen
-  pause();
   I.click('/html/body/div[3]/div[2]/div[3]/div[2]/div[2]/a'); //knop winkelwagen
 
-  // Shopping_cart
+  // Last step: checking outcome testcase
   I.waitForElement('#tst_shipping_costs',20);
   I.saveScreenshot('TG1_shopping_cart_gratis.png');
   I.see('Gratis');
