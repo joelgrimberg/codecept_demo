@@ -24,11 +24,11 @@ Scenario('TG1 - shipping costs > 20,--', (I, objects) => {
   I.pressKey('Enter');
 
   // Inside Search Results
-  I.waitForElement(objects.search_result_first_row, 30);
+  I.waitForElement(objects.search_result_first_row, 60);
   I.click(objects.search_result_first_row);
 
   // Modal order has been added to shopping cart
-  I.waitForElement(objects.button_continue_shopping, 30);
+  I.waitForElement(objects.button_continue_shopping, 60);
   I.click(objects.button_continue_shopping);
 
   // Back on Resultpage
@@ -55,20 +55,20 @@ Scenario('TG2_shipping costs < 20,--', (I, objects) => {
   I.setCookie({name: 'se-popup', value: '1'});
 
   // Search for 'baardolie'
-  I.waitForElement(objects.search_input_field, 30);
+  I.waitForElement(objects.search_input_field, 60);
   I.click(objects.search_input_field);
   I.fillField(objects.search_input_field, 'baardolie');
   I.pressKey('Enter');
 
   // Inside Search Results
-  I.waitForElement(objects.search_result_first_row, 30);
+  I.waitForElement(objects.search_result_first_row, 60);
   I.click(objects.search_result_first_row);
 
   // To the shopping cart
-  I.waitForElement(objects.order_link, 30);
+  I.waitForElement(objects.order_link, 60);
   I.click(objects.order_link);
 
   // Last step: checking outcome testcase
-  I.waitForElement('#tst_shipping_costs', 20);
+  I.waitForElement('#tst_shipping_costs', 60);
   I.see('1,99');
 });
