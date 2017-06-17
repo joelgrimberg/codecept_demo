@@ -10,6 +10,6 @@ addons:
 before_script:
   - npm install selenium-standalone@latest -g
   - selenium-standalone install
-  - nohup selenium-standalone start > selenium.txt 2>&1 </dev/null &
+  - nohup selenium-standalone start
 script:
   - npm test

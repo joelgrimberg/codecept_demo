@@ -1,10 +1,14 @@
+
+'use strict';
 //require('dotenv-safe').config();
+
 
 const WebDriverIO = {};
 WebDriverIO.url = 'https://www.bol.com';
 WebDriverIO.browser = 'chrome';
 
-//if (process.env.TRAVIS) {
+
+if (process.env.TRAVIS) {
   const caps = {};
   caps.url = 'https://www.bol.com';
   caps.browserName = 'chrome';
@@ -18,31 +22,37 @@ WebDriverIO.browser = 'chrome';
   WebDriverIO.user = process.env.SAUCE_USERNAME;
   WebDriverIO.key = process.env.SAUCE_ACCESS_KEY;
   WebDriverIO.desiredCapabilities = caps;
-//}
+}
 
+// exports.config = {
+//   tests: './*_test.js',
+//   timeout: 10000,
+//   output: './output',
+//   helpers: {
+//     WebDriverIO
+//     },
+//     iterator: {
+//       require: './iterator_helper.js'
+//     }
+//   },
+//   include: {
+//     I : './steps_file.js',
+//     objects : './objects.js'
+//   },
+//   bootstrap: false,
+//   mocha: {},
+//   name: 'production'
+// },
 
 exports.config = {
-
-  "tests": "./*_test.js",
-  "timeout": 10000,
-  "output": "./output",
-  "helpers": {
-    "WebDriverIO": {
-      // load variables from the environment and provide defaults
-      "url": "https://www.bol.com",
-      "browser": "chrome",
-      //  "browser" : process.profile || "phantomjs",
-      // "restart" : "false"  : https://github.com/Codeception/CodeceptJS/issues/241
-    },
-    "iterator": {
-      "require": "./iterator_helper.js"
-    }
+  tests: './tests/e2e/tests/*AT.js',
+  timeout: 10000,
+  output: './tests/e2e/output',
+  helpers: {
+    WebDriverIO,
   },
-  "include": {
-    "I"                 : "./steps_file.js",
-    "objects"           : "./objects.js"
-  },
-  "bootstrap": false,
-  "mocha": {},
-  "name": "production"
-}
+  bootstrap: './tests/e2e/hooks/bootstrap.js',
+  teardown: './tests/e2e/hooks/bootstrap.js',
+  mocha: {},
+  name: 'webdriverio',
+};
