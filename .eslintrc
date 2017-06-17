@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "extends": ["eslint-config-mm"],
+  "rules": {
+     "new-cap": "off"
+    }
+}

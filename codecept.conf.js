@@ -7,7 +7,7 @@ exports.config = {
       // load variables from the environment and provide defaults
       "url": "https://www.bol.com",
       "browser": "chrome",
-      //"browser" : process.profile || "phantomjs",
+      //  "browser" : process.profile || "phantomjs",
       "restart" : "false"
     },
     "iterator": {
@@ -15,8 +15,8 @@ exports.config = {
     }
   },
   "include": {
-    "I": "./steps_file.js",
-    "globals": "./globals.js"
+    "I"                 : "./steps_file.js",
+    "objects"           : "./objects.js"
   },
   "bootstrap": false,
   "mocha": {},
