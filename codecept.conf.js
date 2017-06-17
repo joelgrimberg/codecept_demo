@@ -24,35 +24,22 @@ if (process.env.TRAVIS) {
   WebDriverIO.desiredCapabilities = caps;
 }
 
-// exports.config = {
-//   tests: './*_test.js',
-//   timeout: 10000,
-//   output: './output',
-//   helpers: {
-//     WebDriverIO
-//     },
-//     iterator: {
-//       require: './iterator_helper.js'
-//     }
-//   },
-//   include: {
-//     I : './steps_file.js',
-//     objects : './objects.js'
-//   },
-//   bootstrap: false,
-//   mocha: {},
-//   name: 'production'
-// },
-
 exports.config = {
-  tests: './tests/e2e/tests/*AT.js',
+  tests: './*_test.js',
   timeout: 10000,
-  output: './tests/e2e/output',
+  output: './output',
   helpers: {
-    WebDriverIO,
+    WebDriverIO
+    },
+    iterator: {
+      require: './iterator_helper.js'
+    }
   },
-  bootstrap: './tests/e2e/hooks/bootstrap.js',
-  teardown: './tests/e2e/hooks/bootstrap.js',
+  include: {
+    I : './steps_file.js',
+    objects : './objects.js'
+  },
+  bootstrap: false,
   mocha: {},
-  name: 'webdriverio',
-};
+  name: 'production'
+}
