@@ -1,6 +1,4 @@
-
 'use strict';
-//require('dotenv-safe').config();
 
 const WebDriverIO = {};
 WebDriverIO.url = 'https://www.bol.com';

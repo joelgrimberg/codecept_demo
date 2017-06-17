@@ -1,3 +1,5 @@
+/// <reference path="./steps.d.ts" />
+
 /* jshint esversion: 6 */
 
 // Scenario's
@@ -10,7 +12,7 @@ Feature('Shipping costs_test');
 
 Scenario('TG1 - shipping costs > 20,--', (I, objects) => {
   I.resizeWindow(1220, 1024);
-
+  
   // Page
   I.amOnPage('/');
 
@@ -45,6 +47,7 @@ Scenario('TG1 - shipping costs > 20,--', (I, objects) => {
   I.waitForElement('#tst_shipping_costs', 20);
   I.see('Gratis');
 });
+
 Scenario('TG2_shipping costs < 20,--', (I, objects) => {
   I.resizeWindow(1220, 1024);
 
