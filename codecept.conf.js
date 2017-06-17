@@ -2,7 +2,6 @@
 'use strict';
 //require('dotenv-safe').config();
 
-
 const WebDriverIO = {};
 WebDriverIO.url = 'https://www.bol.com';
 WebDriverIO.browser = 'chrome';
@@ -29,11 +28,7 @@ exports.config = {
   timeout: 10000,
   output: './output',
   helpers: {
-    WebDriverIO
-    },
-    iterator: {
-      require: './iterator_helper.js'
-    }
+    WebDriverIO,
   },
   include: {
     I : './steps_file.js',
