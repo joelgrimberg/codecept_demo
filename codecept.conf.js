@@ -1,4 +1,4 @@
-require('dotenv-safe').config();
+//require('dotenv-safe').config();
 
 const WebDriverIO = {};
 WebDriverIO.url = 'http://localhost:3000';
