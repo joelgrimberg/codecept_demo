@@ -1,7 +1,7 @@
 //require('dotenv-safe').config();
 
 const WebDriverIO = {};
-WebDriverIO.url = 'http://localhost:3000';
+WebDriverIO.url = 'https://www.bol.com';
 WebDriverIO.browser = 'chrome';
 
 if (process.env.TRAVIS) {
