@@ -4,3 +4,5 @@ node_js:
 addons:
   sauce_connect: true
   direct_domains: bol.com
+  username: "Your Sauce Labs username"
+  access_key: "Your Sauce Labs access key"
