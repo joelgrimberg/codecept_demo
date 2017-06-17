@@ -32,7 +32,7 @@ exports.config = {
       "url": "https://www.bol.com",
       "browser": "chrome",
       //  "browser" : process.profile || "phantomjs",
-      "restart" : "false"
+      // "restart" : "false"  : https://github.com/Codeception/CodeceptJS/issues/241
     },
     "iterator": {
       "require": "./iterator_helper.js"
