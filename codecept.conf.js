@@ -4,7 +4,7 @@ const WebDriverIO = {};
 WebDriverIO.url = 'https://www.bol.com';
 WebDriverIO.browser = 'chrome';
 
-if (process.env.TRAVIS) {
+//if (process.env.TRAVIS) {
   const caps = {};
   caps.url = 'https://www.bol.com';
   caps.browserName = 'chrome';
@@ -18,7 +18,7 @@ if (process.env.TRAVIS) {
   WebDriverIO.user = process.env.SAUCE_USERNAME;
   WebDriverIO.key = process.env.SAUCE_ACCESS_KEY;
   WebDriverIO.desiredCapabilities = caps;
-}
+//}
 
 
 exports.config = {
