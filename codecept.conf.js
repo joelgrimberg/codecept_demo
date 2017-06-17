@@ -6,7 +6,7 @@ WebDriverIO.browser = 'chrome';
 
 if (process.env.TRAVIS) {
   const caps = {};
-
+  caps.url = 'https://www.bol.com';
   caps.browserName = 'chrome';
   caps.version = '55.0';
   caps['tunnel-identifier'] = process.env.TRAVIS_JOB_NUMBER;
