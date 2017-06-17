@@ -6,10 +6,13 @@ addons:
   direct_domains: bol.com
   username: "Your Sauce Labs username"
   access_key: "Your Sauce Labs access key"
+before_install:
+- npm install selenium-standalone@latest -g
+- selenium-standalone install
 
 before_script:
-  - npm install selenium-standalone@latest -g
-  - selenium-standalone install
-  - nohup selenium-standalone start
+- nohup selenium-standalone start > selenium.txt 2>&1 </dev/null &
+- sleep 15
+
 script:
   - npm test
