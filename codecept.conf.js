@@ -1,12 +1,34 @@
+require('dotenv-safe').config();
+
+const WebDriverIO = {};
+WebDriverIO.url = 'http://localhost:3000';
+WebDriverIO.browser = 'chrome';
+
+if (process.env.TRAVIS) {
+  const caps = {};
+
+  caps.browserName = 'chrome';
+  caps.version = '55.0';
+  caps['tunnel-identifier'] = process.env.TRAVIS_JOB_NUMBER;
+  caps.name = 'acceptance';
+  caps.build = process.env.TRAVIS_BUILD_NUMBER;
+
+  WebDriverIO.host = 'ondemand.saucelabs.com';
+  WebDriverIO.port = 80;
+  WebDriverIO.user = process.env.SAUCE_USERNAME;
+  WebDriverIO.key = process.env.SAUCE_ACCESS_KEY;
+  WebDriverIO.desiredCapabilities = caps;
+}
+
+
 exports.config = {
+
   "tests": "./*_test.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {
     "WebDriverIO": {
       // load variables from the environment and provide defaults
-      "user": "joel-grimberg",
-      "key": "05bb5bca-6c41-4ca7-b1d8-0efecb1439c7",
       "url": "https://www.bol.com",
       "browser": "chrome",
       //  "browser" : process.profile || "phantomjs",

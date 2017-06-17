@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": ".",
   "devDependencies": {
-    "selenium-webdriver": "^2.53.2",
     "codeceptjs": "^0.6.2",
-    "webdriverio": "^4.7.1",
-    "mochawesome": "^2.0.5"
+    "dotenv": "^4.0.0",
+    "mochawesome": "^2.0.5",
+    "selenium-webdriver": "^2.53.2",
+    "webdriverio": "^4.7.1"
   },
   "dependencies": {
     "eslint": "^3.19.0",
