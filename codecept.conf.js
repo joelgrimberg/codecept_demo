@@ -12,6 +12,8 @@ if (process.env.TRAVIS) {
   caps.version = '59.0';
   caps.platform = "macOS 10.12";
   caps.recordScreenshots = false;
+  caps.webdriverRemoteQuietExceptions = false;
+  caps.
   caps['screenResolution'] = '1920x1440';
   caps['tunnel-identifier'] = process.env.TRAVIS_JOB_NUMBER;
   caps.name = 'acceptance';
