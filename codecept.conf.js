@@ -11,7 +11,7 @@ if (process.env.TRAVIS) {
   caps.browserName = 'chrome';
   caps.version = '59.0';
   caps.platform = "macOS 10.12";
-  caps['screenResolution'] = '1920x1440';
+  //caps['screenResolution'] = '1920x1440';
   caps['tunnel-identifier'] = process.env.TRAVIS_JOB_NUMBER;
   caps.name = 'acceptance';
   caps.build = process.env.TRAVIS_BUILD_NUMBER;
