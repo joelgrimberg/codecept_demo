@@ -11,7 +11,7 @@ if (process.env.TRAVIS) {
   // caps.browserName = 'chrome';
   // caps.version = '56.0';
   // caps.chromedriverVersion= '2.26';
-  caps.platform = "macOS 10.12";
+  caps.platform = 'macOS 10.12';
   caps.browserName = 'firefox';
   caps.version = '53.0';
   caps.recordScreenshots = false;
