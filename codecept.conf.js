@@ -8,7 +8,6 @@ WebDriverIO.browser = 'chrome';
 if (process.env.TRAVIS) {
   const caps = {};
   caps.url = 'https://www.bol.com';
-  // caps.browserName = 'chrome';
   // caps.version = '56.0';
   // caps.chromedriverVersion= '2.26';
   caps.platform = 'macOS 10.12';
