@@ -16,7 +16,7 @@ if (process.env.TRAVIS) {
   caps.version = '53.0';
   caps.recordScreenshots = false;
   caps.webdriverRemoteQuietExceptions = false;
-  caps['screenResolution'] = '1920x1440';
+  caps['screenResolution'] = '1600x1200';
   caps['tunnel-identifier'] = process.env.TRAVIS_JOB_NUMBER;
   caps.name = 'acceptance';
   caps.build = process.env.TRAVIS_BUILD_NUMBER;
